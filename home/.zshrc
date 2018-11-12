@@ -51,7 +51,7 @@ export DEFAULT_USER="$USER"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="false"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -128,3 +128,9 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ulrik/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ulrik/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ulrik/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ulrik/google-cloud-sdk/completion.zsh.inc'; fi
